@@ -1,12 +1,192 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<title>Информация о проекте</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TikTok Ultra</title>
+
+  <style>
+    :root{
+      --bg1:#0b1220;
+      --bg2:#070b14;
+      --card:#0f172ad9;
+      --stroke:#243041;
+      --text:#e5e7eb;
+      --muted:#9ca3af;
+      --accent:#38bdf8;
+      --accent2:#60a5fa;
+      --shadow: 0 30px 80px rgba(0,0,0,.55);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 50% 20%, rgba(56,189,248,.18), transparent 60%),
+        radial-gradient(900px 500px at 20% 70%, rgba(96,165,250,.14), transparent 55%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 28px 16px;
+    }
+    .wrap{
+      width:min(520px, 100%);
+      position:relative;
+    }
+    .glow{
+      position:absolute;
+      inset:-40px -30px;
+      background: radial-gradient(closest-side at 50% 40%, rgba(56,189,248,.18), transparent 60%);
+      filter: blur(22px);
+      z-index:0;
+      pointer-events:none;
+    }
+    .card{
+      position:relative;
+      z-index:1;
+      background: linear-gradient(180deg, rgba(15,23,42,.92), rgba(15,23,42,.76));
+      border: 1px solid rgba(36,48,65,.9);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px 22px 22px;
+      backdrop-filter: blur(10px);
+    }
+    .top{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      justify-content:center;
+      flex-direction:column;
+      text-align:center;
+    }
+    .logo{
+      width: 64px;
+      height: 64px;
+      border-radius: 999px;
+      border: 2px solid rgba(255,255,255,.12);
+      box-shadow: 0 0 0 10px rgba(56,189,248,.08);
+      overflow:hidden;
+    }
+    .logo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .title{
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 1.1;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      justify-content:center;
+    }
+    .check{
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: rgba(56,189,248,.18);
+      border: 1px solid rgba(56,189,248,.35);
+      display:grid;
+      place-items:center;
+    }
+    .check svg{width:14px;height:14px;fill:var(--accent)}
+    .badges{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top: 6px;
+    }
+    .badge{
+      font-size: 12px;
+      color: #cbd5e1;
+      background: rgba(2,6,23,.45);
+      border: 1px solid rgba(148,163,184,.18);
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+    .desc{
+      margin: 14px auto 0;
+      max-width: 420px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    .btn{
+      margin-top: 20px;
+      display:block;
+      width:100%;
+      text-decoration:none;
+      text-align:center;
+      padding: 14px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      color: #071827;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      box-shadow:
+        0 14px 35px rgba(56,189,248,.22),
+        inset 0 1px 0 rgba(255,255,255,.25);
+      transition: transform .12s ease, filter .12s ease;
+    }
+    .btn:hover{transform: translateY(-1px);}
+    .footer{
+      margin-top: 14px;
+      text-align:center;
+      color: rgba(148,163,184,.7);
+      font-size: 12px;
+    }
+  </style>
 </head>
+
 <body>
-<h2>Информация о проекте</h2>
-<p>Здесь собрана полезная информация и доступ к ресурсу.</p>
-<a href="https://one-vv93.life/?p=w8ba">Перейти на сайт</a>
+  <div class="wrap">
+    <div class="glow"></div>
+
+    <div class="card">
+      <div class="top">
+<!-- ЛОГОТИП -->
+        <div class="logo">
+          <img src="https://cdn.discordapp.com/attachments/1468239908211654781/1468240006865748018/4f522f1d081cfe18.png?ex=69834c90&is=6981fb10&hm=8a22314aebcafa7885ea9aab5938668464e208ea1c02e9ba283f1af91416522b&"
+               alt="TikTok Ultra">
+        </div>
+
+        <!-- НАЗВАНИЕ -->
+        <div class="title">
+          TikTok Ultra
+          <span class="check">
+            <svg viewBox="0 0 24 24">
+              <path d="M9.0 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/>
+            </svg>
+          </span>
+        </div>
+
+        <!-- ТЕГИ -->
+        <div class="badges">
+          <span class="badge">TikTok Mod</span>
+          <span class="badge">Для Android</span>
+        </div>
+
+        <!-- ОПИСАНИЕ -->
+        <div class="desc">
+          Лучший Telegram-канал с модом TikTok: без рекламы, без водяных знаков,
+          сохранение видео, стабильные обновления.
+        </div>
+      </div>
+
+      <!-- КНОПКА -->
+      <a class="btn"
+         href="https://t.me/tiktokultras"
+         target="_blank" rel="noopener">
+        Перейти в Telegram
+      </a>
+
+      <div class="footer">© 2026 • TikTok Ultra</div>
+    </div>
+  </div>
 </body>
-</html>
+</html>        
